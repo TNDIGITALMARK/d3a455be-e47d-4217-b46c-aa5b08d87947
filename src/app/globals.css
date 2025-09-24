@@ -1,30 +1,43 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Ohana World Travel Luxe Design System
 All colors MUST be HSL.
+Primary: Navy Blue #0A2342 -> hsl(214, 71%, 18%)
+Gold Accent: #C8A951 -> hsl(46, 42%, 56%)
+Sand: #E5D3B3 -> hsl(42, 42%, 81%)
+White: #FFFFFF -> hsl(0, 0%, 100%)
 */
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* Luxury Travel Color Palette */
+  --luxury-navy: 214 71% 18%;     /* #0A2342 */
+  --luxury-gold: 46 42% 56%;      /* #C8A951 */
+  --luxury-sand: 42 42% 81%;      /* #E5D3B3 */
+  --luxury-white: 0 0% 100%;      /* #FFFFFF */
+  --luxury-navy-light: 214 71% 25%;
+  --luxury-navy-dark: 214 71% 12%;
 
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --background: var(--luxury-white);
+  --foreground: var(--luxury-navy);
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --card: var(--luxury-white);
+  --card-foreground: var(--luxury-navy);
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  --popover: var(--luxury-white);
+  --popover-foreground: var(--luxury-navy);
 
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --primary: var(--luxury-navy);
+  --primary-foreground: var(--luxury-white);
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --secondary: var(--luxury-sand);
+  --secondary-foreground: var(--luxury-navy);
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --muted: var(--luxury-sand);
+  --muted-foreground: var(--luxury-navy-light);
+
+  --accent: var(--luxury-gold);
+  --accent-foreground: var(--luxury-navy);
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
@@ -160,4 +173,55 @@ All colors MUST be HSL.
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: hsl(var(--luxury-navy));
+}
+
+.luxury-heading {
+  font-family: 'Playfair Display', serif;
+  color: hsl(var(--luxury-navy));
+}
+
+.luxury-body {
+  font-family: 'Montserrat', sans-serif;
+  color: hsl(var(--luxury-navy));
+}
+
+.luxury-gold {
+  color: hsl(var(--luxury-gold));
+}
+
+.luxury-sand {
+  color: hsl(var(--luxury-sand));
+}
+
+.luxury-navy {
+  color: hsl(var(--luxury-navy));
+}
+
+/* Custom luxury effects */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.luxury-shadow {
+  box-shadow: 0 20px 40px rgba(10, 35, 66, 0.1);
 }
